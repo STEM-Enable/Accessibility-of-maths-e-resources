@@ -1,5 +1,5 @@
 book_filename: "Notes"
-output_dir: "Built"
+output_dir: "docs"
 new_theorems:
   Thought: tho
   Nugget: nug
