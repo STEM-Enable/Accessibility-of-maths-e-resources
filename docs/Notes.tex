@@ -133,97 +133,279 @@
 \hypertarget{why-is-it-important}{%
 \section{Why is it important?}\label{why-is-it-important}}
 
+This is a legal requirement\ldots{}
+
 \begin{itemize}
 \tightlist
 \item
-  New law
+  Equality Act 2010
 \item
-  Processing of concepts - copy across
+  Public Sector Bodies (Websites and Mobile Applications) (No.~2) Accessibility Regulations
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Your institution will have, by law, a statement about accessibility e.g.~\url{https://www.bath.ac.uk/corporate-information/website-accessibility-statement/} which should cover e-learning resources\\
+  \item
+    Learn more about the legal requirements at \url{https://abilitynet.org.uk/news-blogs/your-public-sector-website-prepared-new-regulations}
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{but-we-should-care-anyway}{%
+\subsection{But we should care anyway\ldots{}}\label{but-we-should-care-anyway}}
+
+Mathematics at university level is
+
+\begin{itemize}
+\tightlist
 \item
-  All students may need to work with text in new ways in the new world e.g.~Using their ebook reader to get away from their laptop
+  ``characterised by the need for a high degree of conceptual and abstract thinking within the learning process'' (Mathematics Subject Benchmark)
+\end{itemize}
+
+\textbf{We want} students to have the processing capacity to engage with concepts and abstract thinking!
+
+\begin{itemize}
+\item
+  Students with a print disability, with difficulties with taking notes, memory and concentration may spend substantial processing capacity on entirely different tasks
+\item
+  \textbf{All students} new to e-learning are trying to find new ways to learn and consume mathematics. This will require them to interact with resources in new ways and will impact their processing capacity.
 \end{itemize}
 
 \hypertarget{what-do-you-need-to-do}{%
 \section{What do you need to do?}\label{what-do-you-need-to-do}}
 
+Generally speaking we need to make it possible to access and consume information in a variety of ways.
+
 \begin{itemize}
 \tightlist
 \item
-  Modes of presentation
+  All students, but especially those with e.g.~Dyslexia, will benefit from interactive and responsive resources which are colourful, have well rendered maths and graphics and are enriched with video and audio. Go for it!
 \item
-  Structure
+  But such resources can raise practical and technical barriers for some if poorly made:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Complex navigation and accurate input may be difficult keyboard only or pointer only
+  \item
+    Maths needs to be chunkable and navigable for speech, magnification, Braille and small screens
+  \item
+    Use of colour-only to give meaning is a problem
+  \item
+    Raster graphics do not magnify/zoom well
+  \item
+    Responsive pages with multiple foci hard for VI users
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{structure}{%
+\subsection{Structure}\label{structure}}
+
+Computers rely on structural integrity to process maths:
+
+\begin{itemize}
+\tightlist
+\item
+  PDF, print, handwriting and E-books using images of maths cannot be processed
+
+  \begin{itemize}
+  \tightlist
+  \item
+    They are inaccessible and inflexible on, for instance, small screen devices. They are lossy formats for maths!
+  \end{itemize}
+\item
+  Word, HTML based formats and EPub3 have structural integrity for maths and are accessible to many assistive technologies (AT)
+\item
+  But not all AT can access maths all formats - right now we probably need to produce as much choice as possible
+\item
+  PowerPoint 365 is theoretically accessible but most AT won't work with it yet and it can't be transformed
+\item
+  Using AT effectively for maths requires authors to produce accessible materials
 \end{itemize}
 
 \hypertarget{how-do-you-get-started}{%
 \section{How do you get started?}\label{how-do-you-get-started}}
 
-\hypertarget{authoring-in-word}{%
-\subsection{Authoring in Word}\label{authoring-in-word}}
-
-Copy basic idea in and then link to the Word stuff you already have
+From a technical point of view there are only three formats of mathematical text which are accessible:
 
 \begin{itemize}
 \tightlist
 \item
-  Workshop
+  HTML using MathJax to render the mathematics
 \item
-  Entering equations
+  Word
+\item
+  EPub3
 \end{itemize}
 
-\hypertarget{what-about-latex}{%
-\subsection{What about LaTeX?}\label{what-about-latex}}
+Whatever \textbf{other} formats you supply you \textbf{must} supply at least one or, ideally, all of these (some technology can only access one format, EPub3 has least software support).
 
-\hypertarget{hobsons-choice}{%
-\subsubsection{Hobson's choice}\label{hobsons-choice}}
+\textbf{But} you also need to supply PDF!
 
 \begin{itemize}
 \tightlist
 \item
-  MathAltNotes and why you should avoid it
+  Not all accessibility is about technical access - for some a clear or large print PDF is best
 \item
-  Other ways
+  Clear print is selected most often by disabled students in the Department of Mathematical Sciences.
+\end{itemize}
+
+\hypertarget{web-wcag-2.1-aa-mathjax}{%
+\subsection{Web: WCAG 2.1 AA + MathJax!}\label{web-wcag-2.1-aa-mathjax}}
+
+\begin{itemize}
+\item
+  Check it meets the legal requirement of WCAG 2.1 Level AA with e.g.~\href{https://accessibilityinsights.io/docs/en/web/overview}{Accessibility Insights for Web plugin for Chrome}
+\item
+  Check it is MathJax\ldots{} Right click!
+  \[x = \frac{-b\pm\sqrt{b^2 - 4ac}}{2a}\]
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Provides/enables: navigation, chunking, zoom, copy/paste, colour, size and layout changes\ldots{}
+  \item
+    Structural integrity enables assistive technology including text-to-speech, screenreaders, electronic Braille
+  \end{itemize}
+\item
+  Some VLEs enable you to create pages which meet these requirements using LaTeX for the equations e.g.~Moodle
+\end{itemize}
+
+\hypertarget{word-365-accessibility-checker-equation-editor}{%
+\subsection{Word 365: Accessibility checker + Equation editor}\label{word-365-accessibility-checker-equation-editor}}
+
+\begin{itemize}
+\item
+  Use the inbuilt Word Accessibility Checker and information on \href{https://support.office.com/en-gb/article/make-your-word-documents-accessible-to-people-with-disabilities-d9bf3683-87ac-47ea-b91a-78dcacb3c66d}{Making your Word documents accessible}
+\item
+  Write \emph{all} mathematical text written using the Word 365 equation editor. For instance, if you are writing about the variable \(x\) or \(\theta\) it should be written as an equation. If you are writing \(x^2\) it should be written as an equation.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Never use insert symbol.
+  \item
+    Never write superscripts, subscripts, fractions etc. using font or style changes and standard keyboard input alone
+  \item
+    Never use an image of an equation.
+  \end{itemize}
+\item
+  Use Review -\textgreater{} Read Aloud (Alt + Ctrl + Space) to check the maths
+\item
+  More information and tools at \href{https://stem-enable.github.io/WordWorkshop/}{Using Word to write an accessible mathematical document workshop resources}
+\end{itemize}
+
+\hypertarget{accessible-diagrams}{%
+\subsection{Accessible diagrams}\label{accessible-diagrams}}
+
+\hypertarget{desmos}{%
+\subsubsection{Desmos}\label{desmos}}
+
+Desmos is screenreader accessible and also produces tactile diagrams. If you can redraw the graph in Desmos then do that and put a ``Link to accessible Desmos sheet: LINK'' in as the alterative text. So that none screenreader users can find the Desmos graph as well (it might help them too) put a link somewhere else as well.
+
+\includegraphics[width=0.3\textwidth,height=\textheight]{./Figs/desmos-sine-graph}
+
+\hypertarget{brailler}{%
+\subsubsection{BrailleR}\label{brailler}}
+
+If you are making some sorts of statistical graphs and you know how to use R (fairly well) then there is a \href{https://github.com/ajrgodfrey/BrailleR}{BrailleR} package which can create descriptions of some sorts of graphs automatically.
+
+\hypertarget{output-from-code-and-data}{%
+\subsubsection{Output from code (and data)}\label{output-from-code-and-data}}
+
+If you made a diagram using data or code or some textbased input mechanism then provide that text or link to it somehow.
+
+\hypertarget{all-of-the-rest}{%
+\subsubsection{All of the rest}\label{all-of-the-rest}}
+
+\begin{itemize}
+\tightlist
+\item
+  DIAGRAM Center (\url{http://diagramcenter.org/}) has some great resources for those new to diagram description:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Poet Image Description Training Tool
+  \item
+    Image description guidelines
+  \item
+    Sample book
+  \item
+    Webinar: \url{http://diagramcenter.org/diagramwebinars.html\#compleximages}
+  \end{itemize}
+\item
+  UKAAF has guidance on accessible images: \url{https://www.ukaaf.org/accessible-images/}
+\item
+  NCAM (Old site) has guidelines and examples: \url{http://ncamftp.wgbh.org/ncam-old-site/experience_learn/educational_media/stemdx.html}
+\end{itemize}
+
+\hypertarget{if-having-used-the-above-you-just-dont-know-what-to-do}{%
+\subsubsection{If having used the above you just don't know what to do?}\label{if-having-used-the-above-you-just-dont-know-what-to-do}}
+
+Some diagrams actually are so complex that a text description is unhelpful or they have a particular visual function, in that they are not required to communicate the mathematical nature of the object but they are required for the learner to grasp a visualisation of the object which in itself is needed somehow (e.g.~image of a Klein bottle is a 2D representation of a 4D object embedded into 3D space, trying to describe it or make a tactile diagram is never going to work as well as the visual does for a sighted person as simply handing a blind person an appropriately well-made model, don't be afraid to say ``too complex/whatever for description, please request a tactile graphic from INSERT MAIL ADDRESS or a model from INSERT MAIL ADDRESS'')
+
+\hypertarget{the-elephant-in-the-room-what-about-latex}{%
+\subsection{The elephant in the room: What about LaTeX?}\label{the-elephant-in-the-room-what-about-latex}}
+
+\begin{itemize}
+\tightlist
+\item
+  The past: Try to use \href{https://hub.docker.com/r/bathmash/mathaltnotes}{tools which may or may not work and that cannot tell you, in general why something doesn't work}
+\item
+  The future? \href{https://ctan.org/pkg/lwarp?lang=en}{lwarp} but beware of some hard work (documentation currently 1237 pages) - what happens depends on what you are doing in LaTeX and how and you have to work that out and test for accessibility for yourself.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    It is \textbf{not possible} to convert LaTeX to html in the general case.
+  \item
+    I'm not sure how to produce Word or EPub but it is probably possible e.g.~via \href{https://pandoc.org/}{Pandoc}
+  \end{itemize}
+\item
+  Easiest: Use (R)Markdown/Bookdown, incorporating LaTeX for equations and a simple markup language for the rest of the document. You will be confined to a transformable subset with will a quick compile loop. The output has known accessibility features. It is still extensible, just more reasonably so.
 \end{itemize}
 
 \hypertarget{markdownrmarkdownbookdown}{%
 \subsubsection{Markdown/RMarkdown/Bookdown}\label{markdownrmarkdownbookdown}}
 
-\BeginKnitrBlock{theorem}
-\label{thm:thm1} A labeled theorem here.
-\EndKnitrBlock{theorem}
+\begin{itemize}
+\tightlist
+\item
+  More information on getting started with RMarkdown see \href{https://stem-enable.github.io/RMarkdownWorkshop/}{Using R as a basis for writing an accessible mathematical document}
+\end{itemize}
 
-\BeginKnitrBlock{proposition}
-\label{prp:prop1} A labeled theorem here.
-\EndKnitrBlock{proposition}
-
-\BeginKnitrBlock{lemma}
-\label{lem:lem1} A labeled theorem here.
-\EndKnitrBlock{lemma}
+But, you will probably want \href{https://bookdown.org/}{Bookdown} or more eventually:
 
 \BeginKnitrBlock{theorem}
-\label{thm:thm2} A labeled theorem here.
+\label{thm:thm1} Bookdown is needed for things like theorems and internal references
 \EndKnitrBlock{theorem}
 
-\BeginKnitrBlock{corollary}
-\label{cor:cor1} A labeled theorem here.
-\EndKnitrBlock{corollary}
+Now go to \ref{thm:thm1}.
 
 \hypertarget{work-in-progress-claverton-down}{%
 \subsubsection{Work in progress: Claverton Down}\label{work-in-progress-claverton-down}}
 
+Added over the top of Bookdown and aimed specifically at making resources for students.
+* This document and the variants are produced using it.
+
+For instance:
+
 \BeginKnitrBlock{Thought}
-\protect\hypertarget{Thought:tho1}{}{ \label{tho:tho1} }A labeled theorem here.
+\protect\hypertarget{Thought:tho1}{}{ \label{tho:tho1} }You can create new theorem types
 \EndKnitrBlock{Thought}
 
 \BeginKnitrBlock{Nugget}
-\protect\hypertarget{Nugget:nug1}{}{ \label{nug:nug1} }A labeled theorem here.
+\protect\hypertarget{Nugget:nug1}{}{ \label{nug:nug1} }And you can have theorem types share numbering
 \EndKnitrBlock{Nugget}
 
-This is a test. Now go to \ref{prp:prop1}.
+Information about how to access and use this will be at \href{https://github.com/BathMASH/clavertondown\#readme}{ClavertonDown}
 
-\hypertarget{accessible-diagrams}{%
-\subsection{Accessible diagrams}\label{accessible-diagrams}}
-
-Copy from the email and include a Desmos sine wave in case we have time
+\begin{itemize}
+\tightlist
+\item
+  At some point the name might change if it is used outside of Bath!
+\end{itemize}
 
 \hypertarget{further-information}{%
 \section{Further information}\label{further-information}}
@@ -231,20 +413,40 @@ Copy from the email and include a Desmos sine wave in case we have time
 \begin{itemize}
 \tightlist
 \item
-  sigma
+  \href{http://www.sigma-network.ac.uk/}{sigma Network}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \href{http://www.sigma-network.ac.uk/sigs/accessibility-sig/}{Accessibility Special Interest Group}
+  \end{itemize}
 \item
-  stemenable
+  \href{http://www.stem-enable.org.uk}{StemEnable}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Content is being added at the moment
+  \end{itemize}
 \end{itemize}
 
-\hypertarget{thanks-questions}{%
-\section{Thanks \& questions}\label{thanks-questions}}
+\hypertarget{thanks-for-listening-and-watching}{%
+\section{Thanks for listening and watching}\label{thanks-for-listening-and-watching}}
 
 \begin{itemize}
 \tightlist
 \item
-  Where you can download this
+  This document is available at \href{https://stem-enable.github.io/Accessibility-of-maths-e-resources/index.html}{Accessible maths e-resources}
+\end{itemize}
+
+\hypertarget{any-questions}{%
+\paragraph{Any questions?}\label{any-questions}}
+\addcontentsline{toc}{paragraph}{Any questions?}
+
+\begin{itemize}
+\tightlist
 \item
-  How you can contact me
+  My email address is \href{mailto:E.H.Cliffe@bath.ac.uk}{\nolinkurl{E.H.Cliffe@bath.ac.uk}}
 \end{itemize}
 
 \end{document}

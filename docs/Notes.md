@@ -13,17 +13,17 @@ output:
     toc: true
     number_sections: true
     keep_md: true
-  clavertondown::gitbook_clav:
-    split_by: section
-    config:
-      download: [["Notes.pdf","Standard print PDF"], ["NotesClear.pdf","Clear print PDF"], ["NotesLarge.pdf","Large print PDF"], ["Notes.docx","Accessible Word document"], ["Notes.epub","Accessible EPub book" ]]
-      sharing: no
   clavertondown::pdf_clav:
     latex_engine: pdflatex
     dev: pdf
     keep_tex: true
     fig_caption: false
     toc: true
+  clavertondown::gitbook_clav:
+    split_by: section
+    config:
+      download: [["Notes.pdf","Standard print PDF"], ["NotesClear.pdf","Clear print PDF"], ["NotesLarge.pdf","Large print PDF"], ["Notes.docx","Accessible Word document"], ["Notes.epub","Accessible EPub book" ]]
+      sharing: no
   clavertondown::html_clav:
     toc: true
   clavertondown::epub_clav:
@@ -41,64 +41,176 @@ output:
 
 # Why is it important?
 
-* New law
-* Processing of concepts - copy across
-* All students may need to work with text in new ways in the new world e.g. Using their ebook reader to get away from their laptop
+This is a legal requirement...
+
+* Equality Act 2010
+* Public Sector Bodies (Websites and Mobile Applications) (No. 2) Accessibility Regulations
+  * Your institution will have, by law, a statement about accessibility e.g. https://www.bath.ac.uk/corporate-information/website-accessibility-statement/ which should cover e-learning resources   
+  * Learn more about the legal requirements at https://abilitynet.org.uk/news-blogs/your-public-sector-website-prepared-new-regulations
+
+## But we should care anyway...
+
+Mathematics at university level is
+
+* "characterised by the need for a high degree of conceptual and abstract thinking within the learning process" (Mathematics Subject Benchmark)
+
+**We want** students to have the processing capacity to engage with concepts and abstract thinking!
+
+* Students with a print disability, with difficulties with taking notes, memory and concentration may spend substantial processing capacity on entirely different tasks
+
+* **All students** new to e-learning are trying to find new ways to learn and consume mathematics. This will require them to interact with resources in new ways and will impact their processing capacity.
 
 # What do you need to do?
 
-* Modes of presentation
-* Structure
+Generally speaking we need to make it possible to access and consume information in a variety of ways. 
+
+* All students, but especially those with e.g. Dyslexia, will benefit from interactive and responsive resources which are colourful, have well rendered maths and graphics and are enriched with video and audio. Go for it!
+* But such resources can raise practical and technical barriers for some if poorly made:
+  * Complex navigation and accurate input may be difficult keyboard only or pointer only
+  * Maths needs to be chunkable and navigable for speech, magnification, Braille and small screens
+  * Use of colour-only to give meaning is a problem
+  * Raster graphics do not magnify/zoom well
+  * Responsive pages with multiple foci hard for VI users
+
+## Structure
+
+Computers rely on structural integrity to process maths:
+
+* PDF, print, handwriting and E-books using images of maths cannot be processed
+  * They are inaccessible and inflexible on, for instance, small screen devices. They are lossy formats for maths!
+* Word, HTML based formats and EPub3 have structural integrity for maths and are accessible to many assistive technologies (AT)
+ * But not all AT can access maths all formats - right now we probably need to produce as much choice as possible 
+  * PowerPoint 365 is theoretically accessible but most AT won't work with it yet and it can't be transformed 
+* Using AT effectively for maths requires authors to produce accessible materials
 
 # How do you get started?
 
-## Authoring in Word
+From a technical point of view there are only three formats of mathematical text which are accessible:
 
-Copy basic idea in and then link to the Word stuff you already have
+* HTML using MathJax to render the mathematics
+* Word
+* EPub3
 
-* Workshop
-* Entering equations
+Whatever **other** formats you supply you **must** supply at least one or, ideally, all of these (some technology can only access one format, EPub3 has least software support). 
 
-## What about LaTeX?
+**But** you also need to supply PDF! 
 
-### Hobson's choice
+* Not all accessibility is about technical access - for some a clear or large print PDF is best
+* Clear print is selected most often by disabled students in the Department of Mathematical Sciences.
 
-* MathAltNotes and why you should avoid it
-* Other ways 
+## Web: WCAG 2.1 AA + MathJax!
 
-### Markdown/RMarkdown/Bookdown
+* Check it meets the legal requirement of WCAG 2.1 Level AA with e.g. [Accessibility Insights for Web plugin for Chrome](https://accessibilityinsights.io/docs/en/web/overview)
 
-\BeginKnitrBlock{theorem}<div class="bookdown-theorem" id="thm:thm1"><strong>(\#thm:thm1) </strong>A labeled theorem here.</div>\EndKnitrBlock{theorem}
+* Check it is MathJax... Right click!
+\[x = \frac{-b\pm\sqrt{b^2 - 4ac}}{2a}\]
 
-\BeginKnitrBlock{proposition}<div class="bookdown-proposition" id="prp:prop1"><strong>(\#prp:prop1) </strong>A labeled theorem here.</div>\EndKnitrBlock{proposition}
+  * Provides/enables: navigation, chunking, zoom, copy/paste, colour, size and layout changes...
+  * Structural integrity enables assistive technology including text-to-speech, screenreaders, electronic Braille
 
-\BeginKnitrBlock{lemma}<div class="bookdown-lemma" id="lem:lem1"><strong>(\#lem:lem1) </strong>A labeled theorem here.</div>\EndKnitrBlock{lemma}
+* Some VLEs enable you to create pages which meet these requirements using LaTeX for the equations e.g. Moodle
 
-\BeginKnitrBlock{theorem}<div class="bookdown-theorem" id="thm:thm2"><strong>(\#thm:thm2) </strong>A labeled theorem here.</div>\EndKnitrBlock{theorem}
 
-\BeginKnitrBlock{corollary}<div class="bookdown-corollary" id="cor:cor1"><strong>(\#cor:cor1) </strong>A labeled theorem here.</div>\EndKnitrBlock{corollary}
+## Word 365: Accessibility checker + Equation editor
 
-### Work in progress: Claverton Down
+* Use the inbuilt Word Accessibility Checker and information on [Making your Word documents accessible](https://support.office.com/en-gb/article/make-your-word-documents-accessible-to-people-with-disabilities-d9bf3683-87ac-47ea-b91a-78dcacb3c66d)
+* Write *all* mathematical text written using the Word 365 equation editor. For instance, if you are writing about the variable \(x\) or \(\theta\) it should be written as an equation. If you are writing \(x^2\) it should be written as an equation.
+  * Never use insert symbol.
+  * Never write superscripts, subscripts, fractions etc. using font or style changes and standard keyboard input alone
+  * Never use an image of an equation.
+* Use Review -> Read Aloud (Alt + Ctrl + Space) to check the maths 
 
-\BeginKnitrBlock{Thought}<div class="newtheorem"><span class="Thought" id="Thought:tho1"><strong> Thought (\#Thought:tho1) </strong></span>A labeled theorem here.</div>\EndKnitrBlock{Thought}
-
-\BeginKnitrBlock{Nugget}<div class="newtheorem"><span class="Nugget" id="Nugget:nug1"><strong> Nugget (\#Nugget:nug1) </strong></span>A labeled theorem here.</div>\EndKnitrBlock{Nugget}
-
-This is a test. Now go to \@ref(prp:prop1).
+* More information and tools at [Using Word to write an accessible mathematical document workshop resources](https://stem-enable.github.io/WordWorkshop/)
 
 ## Accessible diagrams
 
-Copy from the email and include a Desmos sine wave in case we have time
+### Desmos
+
+Desmos is screenreader accessible and also produces tactile diagrams. If you can redraw the graph in Desmos then do that and put a “Link to accessible Desmos sheet: LINK” in as the alterative text. So that none screenreader users can find the Desmos graph as well (it might help them too) put a link somewhere else as well.
+
+<iframe src="https://www.desmos.com/calculator/rtvcqeg9ol?embed" width="700px" height="300px" style="border: 1px solid #ccc" frameborder="0">![[Interactive plot of sine](https://www.desmos.com/calculator/rtvcqeg9ol)\label{sine}](./Figs/desmos-sine-graph.png){width=30% longdesc=https://www.desmos.com/calculator/rtvcqeg9ol}</iframe>
+
+
+
+
+### BrailleR
+
+If you are making some sorts of statistical graphs and you know how to use R (fairly well) then there is a [BrailleR](https://github.com/ajrgodfrey/BrailleR) package which can create descriptions of some sorts of graphs automatically. 
+
+
+
+
+
+<!--![[Follow link for interative plot](./Figs/myhist2.html)\label{histplotinteractive}](./Figs/myhist2.svg){longdesc=./myhist2.html}-->
+
+
+### Output from code (and data)
+
+If you made a diagram using data or code or some textbased input mechanism then provide that text or link to it somehow.
+
+### All of the rest
+
+* DIAGRAM Center (http://diagramcenter.org/) has some great resources for those new to diagram description:
+  * Poet Image Description Training Tool
+  * Image description guidelines
+  * Sample book
+  * Webinar: http://diagramcenter.org/diagramwebinars.html#compleximages
+* UKAAF has guidance on accessible images: https://www.ukaaf.org/accessible-images/
+* NCAM (Old site) has guidelines and examples: http://ncamftp.wgbh.org/ncam-old-site/experience_learn/educational_media/stemdx.html
+
+### If having used the above you just don't know what to do? 
+
+Some diagrams actually are so complex that a text description is unhelpful or they have a particular visual function, in that they are not required to communicate the mathematical nature of the object but they are required for the learner to grasp a visualisation of the object which in itself is needed somehow (e.g. image of a Klein bottle is a 2D representation of a 4D object embedded into 3D space, trying to describe it or make a tactile diagram is never going to work as well as the visual does for a sighted person as simply handing a blind person an appropriately well-made model, don’t be afraid to say “too complex/whatever for description, please request a tactile graphic from INSERT MAIL ADDRESS or a model from INSERT MAIL ADDRESS”)
+
+## The elephant in the room: What about LaTeX?
+
+* The past: Try to use [tools which may or may not work and that cannot tell you, in general why something doesn't work](https://hub.docker.com/r/bathmash/mathaltnotes)
+* The future? [lwarp](https://ctan.org/pkg/lwarp?lang=en) but beware of some hard work (documentation currently 1237 pages) - what happens depends on what you are doing in LaTeX and how and you have to work that out and test for accessibility for yourself. 
+  * It is **not possible** to convert LaTeX to html in the general case. 
+  * I'm not sure how to produce Word or EPub but it is probably possible e.g. via [Pandoc](https://pandoc.org/)
+* Easiest: Use (R)Markdown/Bookdown, incorporating LaTeX for equations and a simple markup language for the rest of the document. You will be confined to a transformable subset with will a quick compile loop. The output has known accessibility features. It is still extensible, just more reasonably so.
+
+### Markdown/RMarkdown/Bookdown
+
+* More information on getting started with RMarkdown see [Using R as a basis for writing an accessible mathematical document](https://stem-enable.github.io/RMarkdownWorkshop/)
+
+But, you will probably want [Bookdown](https://bookdown.org/) or more eventually:
+
+\BeginKnitrBlock{theorem}<div class="bookdown-theorem" id="thm:thm1"><strong>(\#thm:thm1) </strong>Bookdown is needed for things like theorems and internal references</div>\EndKnitrBlock{theorem}
+
+Now go to \@ref(thm:thm1).
+
+### Work in progress: Claverton Down
+
+Added over the top of Bookdown and aimed specifically at making resources for students. 
+* This document and the variants are produced using it. 
+
+For instance:
+
+\BeginKnitrBlock{Thought}<div class="newtheorem"><span class="Thought" id="Thought:tho1"><strong> Thought (\#Thought:tho1) </strong></span>You can create new theorem types</div>\EndKnitrBlock{Thought}
+
+\BeginKnitrBlock{Nugget}<div class="newtheorem"><span class="Nugget" id="Nugget:nug1"><strong> Nugget (\#Nugget:nug1) </strong></span>And you can have theorem types share numbering
+</div>\EndKnitrBlock{Nugget}
+
+
+Information about how to access and use this will be at [ClavertonDown](https://github.com/BathMASH/clavertondown#readme)
+
+* At some point the name might change if it is used outside of Bath!
 
 # Further information
 
-* sigma
-* stemenable
+* [sigma Network](http://www.sigma-network.ac.uk/) 
+  * [Accessibility Special Interest Group](http://www.sigma-network.ac.uk/sigs/accessibility-sig/)
+* [StemEnable](http://www.stem-enable.org.uk)
+  * Content is being added at the moment
 
-# Thanks & questions
+# Thanks for listening and watching
 
-* Where you can download this
-* How you can contact me
+* This document is available at [Accessible maths e-resources](https://stem-enable.github.io/Accessibility-of-maths-e-resources/index.html)
+
+#### Any questions? {-}
+
+* My email address is [E.H.Cliffe@bath.ac.uk](mailto:E.H.Cliffe@bath.ac.uk)
 
 <!--chapter:end:index.Rmd-->
 
