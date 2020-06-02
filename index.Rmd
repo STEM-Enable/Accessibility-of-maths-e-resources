@@ -1,0 +1,160 @@
+---
+title: "Accessible maths e-resources"
+author: 'Emma Cliffe, Skills Centre: MASH, University of Bath'
+date: 'TALMO, June 2020'
+site: bookdown::bookdown_site
+lang: en
+documentclass: article
+classoption: a4paper
+fontsize: 10pt
+geometry: margin=2.5cm
+output:
+  clavertondown::gitbook_clav:
+    split_by: section
+    config:
+      download: [["Notes.pdf","Standard print PDF"], ["NotesClear.pdf","Clear print PDF"], ["NotesLarge.pdf","Large print PDF"], ["Notes.docx","Accessible Word document"], ["Notes.epub","Accessible EPub book" ]]
+      sharing: no
+  clavertondown::pdf_clav:
+    latex_engine: pdflatex
+    dev: pdf
+    keep_tex: true
+    fig_caption: false
+    toc: true
+  clavertondown::word_clav:
+    toc: true
+    number_sections: true
+    keep_md: true
+  clavertondown::html_clav:
+    toc: true
+  clavertondown::epub_clav:
+    toc: true
+---
+
+\newpage
+\pagenumbering{arabic}
+
+# Where do you start? {-}
+
+* Why is it important?
+* What do you need to do?
+* How do you get started?
+
+# Why is it important?
+
+* New law
+* Processing of concepts - copy across
+* All students may need to work with text in new ways in the new world e.g. Using their ebook reader to get away from their laptop
+
+# What do you need to do?
+
+## Modes of presentation
+
+
+
+## Structure
+
+Interactive, responsive, colourful, maths, graphics, video and audio rich resources which can benefit some disabled students can raise practical and technical barriers for others:
+
+* Complex navigation and accurate input may be difficult keyboard only or pointer only
+* Responsive pages with multiple foci hard for VI users
+* Maths needs to be chunkable and navigable for speech, magnification, Braille and small screens
+* Use of colour-only to give meaning is a problem
+* Raster graphics do not magnify/zoom well
+* Input methods need to be suited to different AT
+Screenreaders and text-to-speech need to be possible
+
+# How do you get started?
+
+From a technical point of view there are only two formats of mathematical text which are accessible:
+
+* HTML using MathJax to render the mathematics
+* Word
+
+Whatever **other** formats you supply you **must** supply one or, ideally, both of these (some technology can only access one or the other). 
+
+**But** you also need to supply PDF! 
+
+* Not all accessibility is about technical access - for some a clear or large print PDF is best
+* Clear print is selected most often by disabled students in the Department of Mathematical Sciences.
+
+## Web: WCAG 2.1 AA + MathJax!
+
+* Check it meets WCAG 2.1 AA requirements with [Accessibility Insights for Web plugin for Chrome](https://accessibilityinsights.io/docs/en/web/overview)
+
+* Check it is MathJax... Right click!
+\[x = \frac{-b\pm\sqrt{b^2 - 4ac}}{2a}\]
+
+  * Provides/enables: navigation, chunking, zoom, copy/paste, colour, size and layout changes...
+  * Structural integrity enables assistive technology including text-to-speech, screenreaders, electronic Braille
+
+* Some VLEs enable you to create pages which meet these requirements using LaTeX for the equations e.g. Moodle
+
+
+## Word 365: Accessibility checker + Equation editor
+
+* Use the inbuilt Word Accessibility Checker and information on [Making your Word documents accessible](https://support.office.com/en-gb/article/make-your-word-documents-accessible-to-people-with-disabilities-d9bf3683-87ac-47ea-b91a-78dcacb3c66d)
+* Write *all* mathematical text written using the Word 365 equation editor. For instance, if you are writing about the variable \(x\) or \(\theta\) it should be written as an equation. If you are writing \(x^2\) it should be written as an equation.
+  * Never use insert symbol.
+  * Never write superscripts, subscripts, fractions etc. using font or style changes and standard keyboard input alone
+  * Never use an image of an equation.
+* Use Review -> Read Aloud (Alt + Ctrl + Space) to check the maths 
+
+* More information and tools at [Using Word to write an accessible mathematical document workshop resources](https://stem-enable.github.io/WordWorkshop/)
+
+## Accessible diagrams
+
+Copy from the email and include a Desmos sine wave in case we have time
+
+<iframe src="https://www.desmos.com/calculator/rtvcqeg9ol?embed" width="700px" height="300px" style="border: 1px solid #ccc" frameborder="0"></iframe>
+
+## The elephant in the room: What about LaTeX?
+
+### Hobson's choice
+
+* MathAltNotes and why you should avoid it
+* Other ways 
+
+### Markdown/RMarkdown/Bookdown
+
+```{theorem, label="thm1"}
+A labeled theorem here.
+```
+
+```{proposition, label="prop1"}
+A labeled theorem here.
+```
+
+```{lemma, label="lem1"}
+A labeled theorem here.
+```
+
+```{theorem, label="thm2"}
+A labeled theorem here.
+```
+
+```{corollary, label="cor1"}
+A labeled theorem here.
+```
+
+### Work in progress: Claverton Down
+
+```{newtheorem, env='Thought', label="tho1"}
+A labeled theorem here.
+```
+
+```{newtheorem, env='Nugget', label="nug1"}
+A labeled theorem here.
+```
+
+This is a test. Now go to \@ref(prp:prop1).
+
+
+# Further information
+
+* sigma
+* stemenable
+
+# Thanks & questions
+
+* Where you can download this
+* How you can contact me
