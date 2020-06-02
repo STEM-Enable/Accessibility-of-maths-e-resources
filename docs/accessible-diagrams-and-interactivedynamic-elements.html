@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2.1 Structure | Accessible maths e-resources</title>
-  <meta name="description" content="2.1 Structure | Accessible maths e-resources" />
+  <title>3.3 Accessible diagrams and interactive/dynamic elements | Accessible maths e-resources</title>
+  <meta name="description" content="3.3 Accessible diagrams and interactive/dynamic elements | Accessible maths e-resources" />
   <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2.1 Structure | Accessible maths e-resources" />
+  <meta property="og:title" content="3.3 Accessible diagrams and interactive/dynamic elements | Accessible maths e-resources" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2.1 Structure | Accessible maths e-resources" />
+  <meta name="twitter:title" content="3.3 Accessible diagrams and interactive/dynamic elements | Accessible maths e-resources" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="what-do-you-need-to-do.html"/>
-<link rel="next" href="how-do-you-get-started.html"/>
+<link rel="prev" href="word-365-accessibility-checker-equation-editor.html"/>
+<link rel="next" href="the-elephant-in-the-room-what-about-latex.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -135,28 +135,69 @@ MathJax.Hub.Config({
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="structure" class="section level2">
-<h2><span class="header-section-number">2.1</span> Structure</h2>
-<p>Computers rely on structural integrity to process maths:</p>
+<div id="accessible-diagrams-and-interactivedynamic-elements" class="section level2">
+<h2><span class="header-section-number">3.3</span> Accessible diagrams and interactive/dynamic elements</h2>
+<div id="interactivedynamic" class="section level3">
+<h3><span class="header-section-number">3.3.1</span> Interactive/dynamic</h3>
 <ul>
-<li>PDF, print, handwriting and E-books using images of maths cannot be processed
+<li>Check that the software/system meets WCAG 2.1 level AA
 <ul>
-<li>They are inaccessible and inflexible on, for instance, small screen devices. They are lossy formats for maths!</li>
+<li>Ask them!</li>
 </ul></li>
-<li>Word, HTML based formats and EPub3 have structural integrity for maths and are accessible to many assistive technologies (AT)</li>
-<li>But not all AT can access maths all formats - right now we probably need to produce as much choice as possible</li>
-<li>PowerPoint 365 is theoretically accessible but most AT won’t work with it yet and it can’t be transformed</li>
-<li>Using AT effectively for maths requires authors to produce accessible materials</li>
+<li>Check that mathematics is rendered via MathJax</li>
+<li>Add subtitles/closed captions to video
+<ul>
+<li>We do this by upload to YouTube, wait for automatic captions to be provided, download as transcript, correct in a text editor, upload, get YouTube to sync and then download as subtitles and add as a subtitle track using.</li>
+</ul></li>
+</ul>
+<p>Don’t avoid using something if it currently can’t be made accessible - Geogebra isn’t fully accessible but it is really great for many disabled students.</p>
+<ul>
+<li>Provide an alternative way to access the same content or experience.</li>
+<li>Tell students what is and isn’t accessible and who to contact if it is a problem. Know what you will do if they contact you!</li>
 </ul>
 </div>
-<!-- </div> -->
+<div id="desmos" class="section level3">
+<h3><span class="header-section-number">3.3.2</span> Desmos</h3>
+<p>Desmos is screenreader accessible and also produces tactile diagrams. If you can redraw the graph in Desmos then do that and put a “Link to accessible Desmos sheet: LINK” in as the alterative text. So that none screenreader users can find the Desmos graph as well (it might help them too) put a link somewhere else as well.</p>
+<iframe src="https://www.desmos.com/calculator/rtvcqeg9ol?embed" width="700px" height="300px" style="border: 1px solid #ccc" frameborder="0">
+<img src="Figs/desmos-sine-graph.png" title="fig:" longdesc="https://www.desmos.com/calculator/rtvcqeg9ol" style="width:30.0%" alt="Interactive plot of sine" />
+</iframe>
+</div>
+<div id="brailler" class="section level3">
+<h3><span class="header-section-number">3.3.3</span> BrailleR</h3>
+<p>If you are making some sorts of statistical graphs and you know how to use R (fairly well) then there is a <a href="https://github.com/ajrgodfrey/BrailleR">BrailleR</a> package which can create descriptions of some sorts of graphs automatically.</p>
+<!--![[Follow link for interative plot](./Figs/myhist2.html)\label{histplotinteractive}](./Figs/myhist2.svg){longdesc=./myhist2.html}-->
+</div>
+<div id="output-from-code-and-data" class="section level3">
+<h3><span class="header-section-number">3.3.4</span> Output from code (and data)</h3>
+<p>If you made a diagram using data or code or some textbased input mechanism then provide that text or link to it somehow.</p>
+</div>
+<div id="all-of-the-rest" class="section level3">
+<h3><span class="header-section-number">3.3.5</span> All of the rest</h3>
+<ul>
+<li>DIAGRAM Center (<a href="http://diagramcenter.org/" class="uri">http://diagramcenter.org/</a>) has some great resources for those new to diagram description:
+<ul>
+<li>Poet Image Description Training Tool</li>
+<li>Image description guidelines</li>
+<li>Sample book</li>
+<li>Webinar: <a href="http://diagramcenter.org/diagramwebinars.html#compleximages" class="uri">http://diagramcenter.org/diagramwebinars.html#compleximages</a></li>
+</ul></li>
+<li>UKAAF has guidance on accessible images: <a href="https://www.ukaaf.org/accessible-images/" class="uri">https://www.ukaaf.org/accessible-images/</a></li>
+<li>NCAM (Old site) has guidelines and examples: <a href="http://ncamftp.wgbh.org/ncam-old-site/experience_learn/educational_media/stemdx.html" class="uri">http://ncamftp.wgbh.org/ncam-old-site/experience_learn/educational_media/stemdx.html</a></li>
+</ul>
+</div>
+<div id="if-having-used-the-above-you-just-dont-know-what-to-do" class="section level3">
+<h3><span class="header-section-number">3.3.6</span> If having used the above you just don’t know what to do?</h3>
+<p>Some diagrams actually are so complex that a text description is unhelpful or they have a particular visual function, in that they are not required to communicate the mathematical nature of the object but they are required for the learner to grasp a visualisation of the object which in itself is needed somehow (e.g. image of a Klein bottle is a 2D representation of a 4D object embedded into 3D space, trying to describe it or make a tactile diagram is never going to work as well as the visual does for a sighted person as simply handing a blind person an appropriately well-made model, don’t be afraid to say “too complex/whatever for description, please request a tactile graphic from INSERT MAIL ADDRESS or a model from INSERT MAIL ADDRESS”)</p>
+</div>
+</div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="what-do-you-need-to-do.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="how-do-you-get-started.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="word-365-accessibility-checker-equation-editor.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="the-elephant-in-the-room-what-about-latex.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

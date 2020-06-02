@@ -13,20 +13,20 @@ output:
     toc: true
     number_sections: true
     keep_md: true
+  clavertondown::gitbook_clav:
+    split_by: section
+    config:
+      download: [["Notes.pdf","Standard print PDF"], ["NotesClear.pdf","Clear print PDF"], ["NotesLarge.pdf","Large print PDF"], ["Notes.docx","Accessible Word document"], ["Notes.epub","Accessible EPub book" ]]
+      sharing: no
   clavertondown::pdf_clav:
     latex_engine: pdflatex
     dev: pdf
     keep_tex: true
     fig_caption: false
     toc: true
-  clavertondown::gitbook_clav:
-    split_by: section
-    config:
-      download: [["Notes.pdf","Standard print PDF"], ["NotesClear.pdf","Clear print PDF"], ["NotesLarge.pdf","Large print PDF"], ["Notes.docx","Accessible Word document"], ["Notes.epub","Accessible EPub book" ]]
-      sharing: no
-  clavertondown::html_clav:
-    toc: true
   clavertondown::epub_clav:
+    toc: true
+  clavertondown::html_clav:
     toc: true
 ---
 
@@ -93,6 +93,8 @@ From a technical point of view there are only three formats of mathematical text
 
 Whatever **other** formats you supply you **must** supply at least one or, ideally, all of these (some technology can only access one format, EPub3 has least software support). 
 
+* Supply your course content 'spine' in this format.
+
 **But** you also need to supply PDF! 
 
 * Not all accessibility is about technical access - for some a clear or large print PDF is best
@@ -122,7 +124,20 @@ Whatever **other** formats you supply you **must** supply at least one or, ideal
 
 * More information and tools at [Using Word to write an accessible mathematical document workshop resources](https://stem-enable.github.io/WordWorkshop/)
 
-## Accessible diagrams
+## Accessible diagrams and interactive/dynamic elements
+
+### Interactive/dynamic
+
+* Check that the software/system meets WCAG 2.1 level AA
+  * Ask them!
+* Check that mathematics is rendered via MathJax
+* Add subtitles/closed captions to video 
+  * We do this by upload to YouTube, wait for automatic captions to be provided, download as transcript, correct in a text editor, upload, get YouTube to sync and then download as subtitles and add as a subtitle track using.
+
+Don't avoid using something if it currently can't be made accessible - Geogebra isn't fully accessible but it is really great for many disabled students. 
+
+* Provide an alternative way to access the same content or experience.
+* Tell students what is and isn't accessible and who to contact if it is a problem. Know what you will do if they contact you!
 
 ### Desmos
 
@@ -161,6 +176,8 @@ If you made a diagram using data or code or some textbased input mechanism then 
 ### If having used the above you just don't know what to do? 
 
 Some diagrams actually are so complex that a text description is unhelpful or they have a particular visual function, in that they are not required to communicate the mathematical nature of the object but they are required for the learner to grasp a visualisation of the object which in itself is needed somehow (e.g. image of a Klein bottle is a 2D representation of a 4D object embedded into 3D space, trying to describe it or make a tactile diagram is never going to work as well as the visual does for a sighted person as simply handing a blind person an appropriately well-made model, don’t be afraid to say “too complex/whatever for description, please request a tactile graphic from INSERT MAIL ADDRESS or a model from INSERT MAIL ADDRESS”)
+
+
 
 ## The elephant in the room: What about LaTeX?
 
