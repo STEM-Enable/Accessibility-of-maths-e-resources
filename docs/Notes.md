@@ -18,6 +18,8 @@ output:
     config:
       download: [["Notes.pdf","Standard print PDF"], ["NotesClear.pdf","Clear print PDF"], ["NotesLarge.pdf","Large print PDF"], ["Notes.docx","Accessible Word document"], ["Notes.epub","Accessible EPub book" ]]
       sharing: no
+  clavertondown::html_clav:
+    toc: true
   clavertondown::pdf_clav:
     latex_engine: pdflatex
     dev: pdf
@@ -25,8 +27,6 @@ output:
     fig_caption: false
     toc: true
   clavertondown::epub_clav:
-    toc: true
-  clavertondown::html_clav:
     toc: true
 ---
 
@@ -128,15 +128,18 @@ Whatever **other** formats you supply you **must** supply at least one or, ideal
 
 ### Interactive/dynamic
 
-* Check that the software/system meets WCAG 2.1 level AA
-  * Ask them!
+* Check that the software/system meets WCAG 2.1 level AA - ask the vendor, procure on this basis
 * Check that mathematics is rendered via MathJax
 * Add subtitles/closed captions to video 
   * We do this by upload to YouTube, wait for automatic captions to be provided, download as transcript, correct in a text editor, upload, get YouTube to sync and then download as subtitles and add as a subtitle track using.
+* Handwriting is an interactive/dynamic element which cannot be made accessible
+  * If you handwrite in OneNote then some aspects of it can be accessed but it is complicated...
 
-Don't avoid using something if it currently can't be made accessible - Geogebra isn't fully accessible but it is really great for many disabled students. 
+**Don't avoid using something if it currently can't be made technically accessible but is important for other sorts of access.**
 
+* Handwriting and Geogebra aren't fully accessible but it is really great for many disabled students. 
 * Provide an alternative way to access the same content or experience.
+  * Rely on a 'spine' of accessible materials and make sure you are referencing them e.g. Hand annotate a gappy version of accessible notes and say aloud what you are doing where and have the full notes have what you are going to handwrite
 * Tell students what is and isn't accessible and who to contact if it is a problem. Know what you will do if they contact you!
 
 ### Desmos
